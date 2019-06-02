@@ -8,7 +8,7 @@
  * Date          Version       Name            Description
  * 2018/12/19 1.0          guchaolong          Creation File
  */
-package com.guchaolong.javalearn.chapter05Collection;
+package com.guchaolong.javalearn.io;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -19,7 +19,7 @@ import java.io.IOException;
  * @author guchaolong
  * @date 2018/12/19 2:24
  */
-public class OutTest {
+public class OutputStreamTest {
     public static void main(String[] args) {
         try {
             FileOutputStream fos = new FileOutputStream("./output.txt");
