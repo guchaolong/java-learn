@@ -6,7 +6,7 @@
  * <p>
  * Revision History:
  * Date          Version       Name            Description
- * 2019/4/30 1.0          guchaolong          Creation File
+ * 2019/6/4 1.0          guchaolong          Creation File
  */
 package com.guchaolong.algorithm.LeetCode;
 
@@ -14,9 +14,8 @@ package com.guchaolong.algorithm.LeetCode;
  * Description:
  *
  * @author guchaolong
- * @date 2019/4/30 9:38
+ * @date 2019/6/4 0:16
  */
-
 class ListNode {
     int val;
     ListNode next;
@@ -25,9 +24,7 @@ class ListNode {
         val = x;
     }
 }
-
-public class T1 {
-
+public class No2 {
     /**
      * 输入：(2 -> 4 -> 3) + (5 -> 6 -> 4)
      * 输出：7 -> 0 -> 8
@@ -74,6 +71,4 @@ public class T1 {
             System.out.println(listNode.val+"->");
             listNode = listNode.next;
         }
-
-    }
-}
+}}
