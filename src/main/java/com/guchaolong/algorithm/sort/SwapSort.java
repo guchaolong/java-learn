@@ -26,6 +26,7 @@ public class SwapSort {
      * 第n-1个 和第n个比较...小的放前面
      *
      * 时间复杂度 O(N²)
+     * 时间复杂度 O(1)
      */
     public static void bubbleSort(int[] arr) {
         if (arr == null || arr.length == 0)
@@ -80,8 +81,8 @@ public class SwapSort {
         arr[low] = arr[i];
         arr[i] = temp;
         //递归调用左半数组
-        quickSort(arr, low, j - 1);
+        quickSort(arr, low, i - 1);
         //递归调用右半数组
-        quickSort(arr, j + 1, high);
+        quickSort(arr, i + 1, high);
     }
 }
