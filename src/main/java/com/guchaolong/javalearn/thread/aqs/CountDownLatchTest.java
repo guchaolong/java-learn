@@ -35,7 +35,6 @@ public class CountDownLatchTest {
                 try {
                     test(threadnum);
                 } catch (InterruptedException e) {
-                    // TODO Auto-generated catch block
                     e.printStackTrace();
                 } finally {
                     countDownLatch.countDown();// 表示一个请求已经被完成

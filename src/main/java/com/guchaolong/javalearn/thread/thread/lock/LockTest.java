@@ -8,7 +8,7 @@
  * Date          Version       Name            Description
  * 2019/4/27 1.0          guchaolong          Creation File
  */
-package com.guchaolong.javalearn.thread.thread;
+package com.guchaolong.javalearn.thread.thread.lock;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
