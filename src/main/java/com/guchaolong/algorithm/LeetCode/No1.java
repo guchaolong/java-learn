@@ -28,7 +28,11 @@ public class No1 {
      * 给定 nums = [2, 7, 11, 15], target = 9
      * 因为 nums[0] + nums[1] = 2 + 7 = 9
      * 所以返回 [0, 1]
-     *
+     */
+
+
+
+    /**
      * 思路：遍历数组，当前值num[i], 需要找到的另一个值为target-num[i]
      * 使用map存储每次遍历到的值num[i]，i
      * 利用map.containsKey(),如果包含了，就说明两个数都找到了，如果不包含，就放到map里，继续往下
