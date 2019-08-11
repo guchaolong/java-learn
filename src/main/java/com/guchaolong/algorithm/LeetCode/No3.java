@@ -47,7 +47,7 @@ public class No3 {
 
         if (s == null || (s.length() == 0)) return 0;
 
-        int preP = 0;//当前字符上次出现的位置（1，2，3...),初始值为0，表示从头开始，还没有出现过
+        int preP = 0;//
         int max = 0;
         int[] hash = new int[128];
 
