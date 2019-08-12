@@ -10,14 +10,21 @@
  */
 package com.guchaolong.algorithm.dfs_bfs;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 /**
  *
  */
 public class Test {
 
+    /**
+     * 广度优先
+     * 一层一层的遍历，使用队列解决
+     *
+     * 首先把根节点放到队列
+     * 然后使用queue.poll()从队列顶端依次取出，不为空的左右节点都往队列尾部加
+     * @param root
+     */
     public static void BFSWithQueue(TreeNode root){
         Queue<TreeNode> queue = new LinkedList<>();
         if(root != null){
@@ -34,6 +41,66 @@ public class Test {
 
     }
 
+    ////DFS递归实现
+    public static void DFSWithRecursion(TreeNode root){
+        if(root ==null)
+            return;
+        System.out.println(root.getValue());
+
+        if(root.left != null)
+            DFSWithRecursion(root.left);
+        if(root.right != null)
+            DFSWithRecursion(root.right);
+    }
+
+    //DFS的迭代实现版本（Stack）
+    public static void DFSWithStack(TreeNode root) {
+        if (root != null)
+            return;
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+
+        while (!stack.isEmpty()) {
+            TreeNode treeNode = stack.pop();
+
+            //在这里处理遍历到的TreeNode
+
+            if (treeNode.right != null)
+                stack.push(treeNode.right);
+
+            if (treeNode.left != null)
+                stack.push(treeNode.left);
+        }
+    }
+
+    //
+
+    /**使用Queue实现BFS
+     * 图和树的最大区别在于图的下一个节点可能指向已访问过的节点。
+     * 因此在使用BFS及DFS遍历时，应维护一个Set，Set中存放已被访问过的节点，在遍历时先判断节点未被访问过再遍历即可
+     * @param root
+     */
+    public static void BFSWithQueue(Node root) {
+        Queue<Node> queue = new LinkedList<>();
+        if (root != null)
+            queue.add(root);
+        Set<Node> visited = new HashSet<>();
+
+        while (!queue.isEmpty()) {
+            Node node = queue.poll();
+            visited.add(node);
+
+            //在这里处理遍历到的Node节点
+
+            if (node.children != null) {
+                for (Node child : node.children) {
+                    if (child != null && !visited.contains(child)){
+                        queue.add(child);
+                    }
+                }
+            }
+        }
+    }
 
     public static void main(String[] args) {
         TreeNode n1 = new TreeNode(1);
@@ -50,7 +117,8 @@ public class Test {
         n3.setLeft(n6);
         n3.setRight(n7);
 
-        BFSWithQueue(n1);
+//        BFSWithQueue(n1);
+        DFSWithRecursion(n1);
 
     }
 }
