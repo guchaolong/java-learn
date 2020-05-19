@@ -27,7 +27,7 @@ public class MergingSort {
     }
 
     /**
-     *归并排序
+     * 归并排序
      */
     private static void sort(int[] arr, int left, int right, int[] temp) {
         if (left < right) {

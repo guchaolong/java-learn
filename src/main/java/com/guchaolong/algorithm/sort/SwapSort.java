@@ -19,12 +19,12 @@ package com.guchaolong.algorithm.sort;
 public class SwapSort {
     /**
      * 冒泡排序
-     *
+     * <p>
      * 第1个  分别和第2、3、4...n个比较，把最小的放到第1个位置
      * 第2个  分别和第3、4、5...n个比较....
      * ...
      * 第n-1个 和第n个比较...小的放前面
-     *
+     * <p>
      * 时间复杂度 O(N²)
      * 时间复杂度 O(1)
      */
@@ -47,9 +47,9 @@ public class SwapSort {
      * 选一个基准数temp，先从右边往左找(j)，找到一个比temp小的，然后停下
      * i再从左往右找(i)，找到一个比temp大的然后停下，如果位置i<j,就交换
      * 最终i和j会再某个位置相遇，把temp和该位置交换，那么temp就找到了他正确的位置，左边的都比temp小，右边的都比temp大
-     *
+     * <p>
      * 再分别对temp两边的数组递归调用
-     *
+     * <p>
      * 最差时间复杂度和冒泡排序是一样的都是O(N²)，它的平均时间复杂度为O(NlogN)
      */
     public static void quickSort(int[] arr, int low, int high) {
