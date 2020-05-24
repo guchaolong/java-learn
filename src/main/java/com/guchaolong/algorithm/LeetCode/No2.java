@@ -33,11 +33,11 @@ public class No2 {
      * time O(n）
      * space O(n)
      */
-    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    public static ListNode addTwoNumbers(ListNode node1, ListNode node2) {
         ListNode dummy = new ListNode(0);
         ListNode cur = dummy;
         int sum = 0;
-        ListNode p1 = l1, p2 = l2;
+        ListNode p1 = node1, p2 = node2;
         while (p1 != null || p2 != null){
             if(p1 != null){
                 sum += p1.val;
