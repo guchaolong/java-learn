@@ -18,6 +18,16 @@ import java.util.*;
  */
 public class Test {
 
+    public static void DFS(TreeNode treeNode){
+        System.out.println(treeNode.value);
+        if(treeNode.left != null){
+            DFS(treeNode.left);
+        }
+        if(treeNode.right != null){
+            DFS(treeNode.right);
+        }
+    }
+
     /**
      * 广度优先
      * 一层一层的遍历，使用队列解决
@@ -128,8 +138,11 @@ public class Test {
         n3.setLeft(n6);
         n3.setRight(n7);
 
-//        BFSWithQueue(n1);
+        BFSWithQueue(n1);
+        System.out.println("=================================================");
         DFSWithStack(n1);
+        System.out.println("=================================================");
+        DFS(n1);
         System.out.println("=================================================");
         DFSWithRecursion(n1);
 
