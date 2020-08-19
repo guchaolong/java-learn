@@ -14,5 +14,9 @@ public class Test {
         int[] arr2 = new int[]{1, 2, 3};
 
         int[] arr3 = {1, 2, 3};
+
+
+        //new一个对象过程
+        SunNewClass sunNewClass = new SunNewClass();
     }
 }
