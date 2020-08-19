@@ -15,6 +15,10 @@ package com.guchaolong.javalearn.cacuchar;
  */
 public class Test {
     public static void main(String[] args) {
-        System.out.println(-24>>>3);
+        //左移n位 乘以2的n次方
+        System.out.println(2<<3);
+        System.out.println(32>>3);
+
+        System.out.println(24>>>3);
     }
 }
