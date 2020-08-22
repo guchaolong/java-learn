@@ -27,12 +27,12 @@ public class SemaphoreTest {
                         //获取许可
                         semaphore.acquire();
 
-                        System.out.println("Accessing" + num);
+                        System.out.println("Accessing..." + num);
 
                         Thread.sleep(new Random().nextInt(5000));
 
                         semaphore.release();
-                        System.out.println("Release" + num);
+                        System.out.println("Release..." + num);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
