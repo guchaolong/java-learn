@@ -8,8 +8,10 @@ import java.lang.reflect.Constructor;
  * @author AA
  * @date 2020/8/19 14:22
  */
-public class Test {
+public class Test1 {
     public static void main(String[] args) throws Exception {
+
+        System.out.println(2 << 2);
         //数组定义
         int[] arr1 = new int[3];
 
@@ -31,8 +33,8 @@ public class Test {
         FatherNewClass o = (FatherNewClass)clasz.newInstance();
 
         //构造函数的newInstance
-        Constructor<FatherNewClass> constructor = FatherNewClass.class.getConstructor();
-        FatherNewClass fatherNewClass = constructor.newInstance();
+//        Constructor<FatherNewClass> constructor = FatherNewClass.class.getConstructor();
+//        FatherNewClass fatherNewClass = constructor.newInstance();
 
 
     }

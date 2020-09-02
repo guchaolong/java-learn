@@ -13,7 +13,7 @@ package com.guchaolong.javalearn.cacuchar;
 /**
  *
  */
-public class Test {
+public class Test2 {
     public static void main(String[] args) {
         //左移n位 乘以2的n次方
         System.out.println(2<<3);
