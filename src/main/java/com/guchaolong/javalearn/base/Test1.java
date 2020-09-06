@@ -1,6 +1,7 @@
 package com.guchaolong.javalearn.base;
 
 import java.lang.reflect.Constructor;
+import java.util.TreeSet;
 
 /**
  * Description:
@@ -12,6 +13,8 @@ public class Test1 {
     public static void main(String[] args) throws Exception {
 
         System.out.println(2 << 2);
+        System.out.println(2 << 24);
+        System.out.println(33554432 / 8/1024);
         //数组定义
         int[] arr1 = new int[3];
 

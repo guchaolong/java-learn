@@ -18,15 +18,45 @@ import java.util.*;
  */
 public class Test {
 
-    public static void DFS(TreeNode treeNode){
-        System.out.println(treeNode.value);
-        if(treeNode.left != null){
-            DFS(treeNode.left);
+    /**
+     *DFS递归实现
+     */
+    public static void DFSWithRecursion(TreeNode root) {
+        if (root == null) {
+            return;
         }
-        if(treeNode.right != null){
-            DFS(treeNode.right);
+        System.out.println(root.getValue());
+
+        if (root.left != null) {
+            DFSWithRecursion(root.left);
+        }
+        if (root.right != null) {
+            DFSWithRecursion(root.right);
         }
     }
+
+    /**
+     * DFS的迭代实现版本（Stack）
+     */
+    public static void DFSWithStack(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            TreeNode treeNode = stack.pop();
+            System.out.println(treeNode.value);
+            //在这里处理遍历到的TreeNode
+            if (treeNode.right != null) {
+                stack.push(treeNode.right);
+            }
+            if (treeNode.left != null) {
+                stack.push(treeNode.left);
+            }
+        }
+    }
+
 
     /**
      * 广度优先
@@ -84,40 +114,7 @@ public class Test {
         }
     }
 
-    ////DFS递归实现
-    public static void DFSWithRecursion(TreeNode root) {
-        if (root == null) {
-            return;
-        }
-        System.out.println(root.getValue());
 
-        if (root.left != null) {
-            DFSWithRecursion(root.left);
-        }
-        if (root.right != null) {
-            DFSWithRecursion(root.right);
-        }
-    }
-
-    //DFS的迭代实现版本（Stack）
-    public static void DFSWithStack(TreeNode root) {
-        if (root == null) {
-            return;
-        }
-        Stack<TreeNode> stack = new Stack<>();
-        stack.push(root);
-        while (!stack.isEmpty()) {
-            TreeNode treeNode = stack.pop();
-            System.out.println(treeNode.value);
-            //在这里处理遍历到的TreeNode
-            if (treeNode.right != null) {
-                stack.push(treeNode.right);
-            }
-            if (treeNode.left != null) {
-                stack.push(treeNode.left);
-            }
-        }
-    }
 
     //
 
@@ -138,13 +135,13 @@ public class Test {
         n3.setLeft(n6);
         n3.setRight(n7);
 
-        BFSWithQueue(n1);
-        System.out.println("=================================================");
-        DFSWithStack(n1);
-        System.out.println("=================================================");
-        DFS(n1);
-        System.out.println("=================================================");
+        System.out.println("=======================递归实现==========================");
         DFSWithRecursion(n1);
+        System.out.println("========================栈实现=========================");
+        DFSWithStack(n1);
+        System.out.println("========================队列实现=========================");
+        BFSWithQueue(n1);
+
 
     }
 }
