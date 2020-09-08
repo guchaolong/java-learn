@@ -40,6 +40,21 @@ public class NIOBufferTest {
         byte[] bytes = new byte[byteBuffer.limit()];
         byteBuffer.get(bytes);
         System.out.println("取数结果" + new String(bytes));
+        System.out.println("===================================================");
 
+        //取数后
+        System.out.println("取数后-->容量capacity：" + byteBuffer.capacity());
+        System.out.println("取数后-->可操作数据的大小limit：" + byteBuffer.limit());
+        System.out.println("取数后-->位置position：" + byteBuffer.position());
+        System.out.println("取数后-->标记mark：" + byteBuffer.mark());
+        System.out.println("===================================================");
+
+        //clear
+        byteBuffer.clear();
+        System.out.println("clear后-->容量capacity：" + byteBuffer.capacity());
+        System.out.println("clear后-->可操作数据的大小limit：" + byteBuffer.limit());
+        System.out.println("clear后-->位置position：" + byteBuffer.position());
+        System.out.println("clear后-->标记mark：" + byteBuffer.mark());
+        System.out.println("===================================================");
     }
 }
