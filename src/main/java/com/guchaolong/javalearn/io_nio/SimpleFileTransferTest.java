@@ -1,4 +1,4 @@
-package com.guchaolong.javalearn.io;
+package com.guchaolong.javalearn.io_nio;
 
 import java.io.*;
 
@@ -36,4 +36,18 @@ public class SimpleFileTransferTest {
         long end = System.currentTimeMillis();
         return end - start;
     }
+
+    private static long transferFileWithNIO(File source, File des) throws Exception{
+
+        long start = System.currentTimeMillis();
+
+        if(!des.exists()){
+            des.createNewFile();
+        }
+
+        long end = System.currentTimeMillis();
+        return end - start;
+    }
+
+
 }
