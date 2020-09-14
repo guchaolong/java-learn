@@ -8,7 +8,7 @@
  * Date          Version       Name            Description
  * 2019/1/3 1.0          guchaolong          Creation File
  */
-package com.guchaolong.java8test;
+package com.guchaolong.java8test.stream;
 
 /**
  * Description:

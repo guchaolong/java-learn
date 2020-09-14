@@ -8,7 +8,7 @@
  * Date          Version       Name            Description
  * 2018/12/28 1.0          guchaolong          Creation File
  */
-package com.guchaolong.java8test;
+package com.guchaolong.java8test.stream;
 
 import java.util.*;
 import java.util.concurrent.CountDownLatch;

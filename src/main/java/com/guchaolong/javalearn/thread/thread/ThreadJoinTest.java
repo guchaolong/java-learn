@@ -12,6 +12,7 @@ public class ThreadJoinTest {
             System.out.println("t1线程");
         });
 
+
         Thread t2 = new Thread(() -> {
             try {
                 t1.join();
