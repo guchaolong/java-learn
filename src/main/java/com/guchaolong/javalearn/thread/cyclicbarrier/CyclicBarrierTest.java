@@ -44,7 +44,7 @@ class Task implements Runnable {
         try {
             Thread.sleep(1000 * (new Random()).nextInt(8));
             System.out.println(name + " reading...");
-            // barrier的await方法，在所有参与者都已经在此 barrier 上调用 await 方法之前，将一直等待。
+            // barrier的await方法，在所有参与者线程都已经在此 barrier 上调用 await 方法之前，将一直等待。
             barrier.await();
         } catch (InterruptedException e) {
             e.printStackTrace();

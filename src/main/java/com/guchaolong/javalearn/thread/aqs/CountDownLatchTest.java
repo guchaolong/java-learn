@@ -23,17 +23,17 @@ import java.util.concurrent.Executors;
 public class CountDownLatchTest {
 
     // 请求的数量
-    private static final int threadCount = 550;
+    private static final int threadCount = 20;
 
     public static void main(String[] args) throws InterruptedException {
         // 创建一个具有固定线程数量的线程池对象（如果这里线程池的线程数量给太少的话你会发现执行的很慢）
-        ExecutorService threadPool = Executors.newFixedThreadPool(300);
+        ExecutorService threadPool = Executors.newFixedThreadPool(10);
         final CountDownLatch countDownLatch = new CountDownLatch(threadCount);
         for (int i = 1; i <= threadCount; i++) {
-            final int threadnum = i;
-            threadPool.execute(() -> {// Lambda 表达式的运用
+            final int threadNum = i;
+            threadPool.execute(() -> {
                 try {
-                    test(threadnum);
+                    test(threadNum);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {
