@@ -13,20 +13,20 @@ public class Test {
 
     }
 
-    public static int binarySearch(int[] arr, int key){
+    public static int binarySearch(int[] arr, int key) {
         int min, mid, max;
         min = 0;
         max = arr.length - 1;
-        mid = (min + max)>>1;
+        mid = (min + max) >> 1;
 
-        while (arr[mid] != key){
-            if(key > arr[mid]){
+        while (arr[mid] != key) {
+            if (key > arr[mid]) {
                 min = mid + 1;
             }
-            if(key < arr[mid]){
-                max = mid -1;
+            if (key < arr[mid]) {
+                max = mid - 1;
             }
-            if(max < min){
+            if (max < min) {
                 return -1;
             }
             mid = (min + max) >> 1;

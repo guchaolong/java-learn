@@ -24,7 +24,7 @@ public class T0 {
      * 兔子问题
      * 1 1 2 3 5 8
      */
-    public static void rabit(int m) {
+    public static void rabbit(int m) {
         int f1 = 1, f2 = 1, f3;
         for (int i = 1; i <= m; i++) {
             if (i < 2) {
@@ -91,8 +91,9 @@ public class T0 {
             } else if (num % k == 0) {
                 System.out.print(k + "×");//如果num <> k，但n能被k整除，则应打印出k的值
                 num = num / k;//num除以k的商,作为新的正整数你num
-            } else
+            } else {
                 k++;
+            }
         }
     }
 

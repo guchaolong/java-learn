@@ -1,9 +1,6 @@
 package com.guchaolong;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.*;
 
 /**
  * Description:
@@ -13,6 +10,8 @@ import java.util.concurrent.ScheduledExecutorService;
  */
 public class MyTest {
     public static void main(String[] args) throws Exception{
+
+        System.out.println(Math.sqrt(8.0));
         boolean b = true;
 
         //switch : 没有boolean float double long  
