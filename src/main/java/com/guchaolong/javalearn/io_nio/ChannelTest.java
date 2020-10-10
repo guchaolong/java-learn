@@ -3,7 +3,7 @@ package com.guchaolong.javalearn.io_nio;
 import java.io.FileInputStream;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
-import java.nio.file.Path;
+import java.nio.channels.Selector;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
@@ -23,7 +23,6 @@ public class ChannelTest {
 
         //2 open
         FileChannel out = FileChannel.open(Paths.get("E:\\project\\java-learn\\output_NIO.txt"), StandardOpenOption.WRITE);
-
 
         //分配指定大小的缓冲区
         ByteBuffer buf = ByteBuffer.allocate(1024);

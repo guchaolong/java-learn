@@ -27,14 +27,22 @@ public class T0 {
     public static void rabbit(int m) {
         int f1 = 1, f2 = 1, f3;
         for (int i = 1; i <= m; i++) {
-            if (i < 2) {
+            if (i <= 2) {
                 System.out.println("第" + i + "个月兔子有1对");
+                continue;
             }
             f3 = f1 + f2;
             f1 = f2;
             f2 = f3;
             System.out.println("第" + i + "个月兔子有" + f3 + "对");
         }
+    }
+
+    public static int rabbit2(int m) {
+        if (m <= 2) {
+            return 1;
+        }
+        return rabbit2(m - 1) + rabbit2(m - 2);
     }
 
     /**
@@ -84,7 +92,7 @@ public class T0 {
         //int num = 90;
         int k = 2;
         System.out.print(num + "=");//输出第一步格式
-        while (num >= k) {//初值k为2,num为输入的数字,在程序执行的过程中k渐渐变大(k++),n渐渐变小(num/k)
+        while (num >= k) {//初值k为2,num为输入的数字,在程序执行的过程中k渐渐变大(k++),num渐渐变小(num/k)
             if (num == k) {
                 System.out.println(k);
                 break;
@@ -125,10 +133,11 @@ public class T0 {
 
 
     public static void main(String[] args) {
-//        rabit(20);
+//        rabbit(20);
+//        System.out.println(rabbit2(20));
 //        prime();
 //        flower();
-//        fen();
-        zxgy();
+        fen();
+//        zxgy();
     }
 }
