@@ -8,7 +8,7 @@
  * Date          Version       Name            Description
  * 2018/12/23 1.0          guchaolong          Creation File
  */
-package com.guchaolong.javalearn.socket;
+package com.guchaolong.javalearn.io.nio;
 
 import java.io.*;
 import java.net.ServerSocket;

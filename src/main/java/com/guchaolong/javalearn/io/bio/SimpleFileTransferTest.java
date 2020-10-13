@@ -1,4 +1,4 @@
-package com.guchaolong.javalearn.io_nio;
+package com.guchaolong.javalearn.io.bio;
 
 import java.io.*;
 

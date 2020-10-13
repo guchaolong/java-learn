@@ -8,7 +8,7 @@
  * Date          Version       Name            Description
  * 2018/12/19 1.0          guchaolong          Creation File
  */
-package com.guchaolong.javalearn.io_nio;
+package com.guchaolong.javalearn.io.bio;
 
 import java.io.FileOutputStream;
 import java.io.IOException;

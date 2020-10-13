@@ -1,9 +1,8 @@
-package com.guchaolong.javalearn.io_nio;
+package com.guchaolong.javalearn.io.nio;
 
 import java.io.FileInputStream;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
-import java.nio.channels.Selector;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 

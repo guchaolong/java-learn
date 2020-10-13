@@ -10,6 +10,7 @@ public class ThereadLocalTest {
     public static void main(String[] args) {
         ThreadLocal<String> threadLocal = new ThreadLocal<>();
         threadLocal.set("hello");
+        threadLocal.set("world");
         System.out.println("main线程get：" + threadLocal.get());
         threadLocal.remove();
         System.out.println("main线程get：" + threadLocal.get());
