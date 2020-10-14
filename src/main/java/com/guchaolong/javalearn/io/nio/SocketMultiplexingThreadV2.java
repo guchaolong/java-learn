@@ -19,6 +19,14 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author AA
  * @date 2020/10/13 17:15
  */
+
+/**
+ * 多线程版非阻塞IO多路复用
+ * <p>
+ * 开启3个线程,每个线程维护一个自己的Selector, 创建一个队列类型的数组，让3个线程共享这个队列
+ * 线程1 boss，只负责处理isAcceptable（）的事件，然后把它放到队列里面
+ * 线程2 和 线程3是两个worker, 负则处理读， 到队列中各自的位置上取出数据做处理
+ */
 public class SocketMultiplexingThreadV2 {
 
     /*

@@ -30,4 +30,5 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 	compile('com.rabbitmq:amqp-client:5.7.0')
 	compile('org.openjdk.jol:jol-core:0.9')
+	compile('io.netty:netty-all:5.0.0.Alpha2')
 }
