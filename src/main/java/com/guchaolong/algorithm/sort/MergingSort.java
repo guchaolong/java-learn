@@ -22,23 +22,24 @@ public class MergingSort {
 
     public static void main(String[] args) {
         int[] a = {1, 2, 7, 10, 5, 3, 9, 4, 12};
-        sort(a, 0, 8, new int[9]);
+        sort(a, 0, 8);
         System.out.println(Arrays.toString(a));
     }
 
     /**
      * 归并排序
      */
-    private static void sort(int[] arr, int left, int right, int[] temp) {
+    private static void sort(int[] arr, int left, int right) {
         if (left < right) {
             int mid = (left + right) / 2;
-            sort(arr, left, mid, temp);//左边归并排序，使得左子序列有序
-            sort(arr, mid + 1, right, temp);//右边归并排序，使得右子序列有序
-            merge(arr, left, mid, right, temp);//将两个有序子数组合并操作
+            sort(arr, left, mid);//左边归并排序，使得左子序列有序
+            sort(arr, mid + 1, right);//右边归并排序，使得右子序列有序
+            merge(arr, left, mid, right);//将两个有序子数组合并操作
         }
     }
 
-    private static void merge(int[] arr, int left, int mid, int right, int[] temp) {
+    private static void merge(int[] arr, int left, int mid, int right) {
+        int[] temp = new int[right - left + 1];
         int i = left;//左序列指针
         int j = mid + 1;//右序列指针
         int t = 0;//临时数组指针
