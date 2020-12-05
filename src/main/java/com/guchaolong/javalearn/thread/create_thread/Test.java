@@ -21,6 +21,7 @@ public class Test {
         FutureTask<String> futureTask = new FutureTask<String>(c);
         Thread t2 = new Thread(futureTask);
         t2.start();
+        System.out.println("futureTask:" + futureTask.get());
 
     }
 }

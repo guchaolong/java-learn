@@ -28,20 +28,18 @@ public class Consumer {
         this.list = list;
     }
 
-    public void consmer() {
-
+    public void consumer() {
         synchronized (object) {
             try {
                 /*只有list不为空时才会去进行消费操作*/
                 while(list.isEmpty()){
-                    System.out.println("消费者"+Thread.currentThread().getName()+" waiting");
+                    System.out.println("消费者" + Thread.currentThread().getName() + " waiting");
                     object.wait();
                 }
-                System.out.println("消费了"+list.get(0));
+                System.out.println("消费了" + list.get(0));
                 list.clear();
-                System.out.println("消费者"+Thread.currentThread().getName()+" Runnable");
+                System.out.println("消费者" + Thread.currentThread().getName() + " Runnable");
                 object.notifyAll();//然后去唤醒因object调用wait方法处于阻塞状态的线程
-
             }catch (InterruptedException e) {
                 e.printStackTrace();
             }

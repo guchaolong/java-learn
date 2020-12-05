@@ -24,7 +24,7 @@ public class ConsumeThread extends Thread {
     @Override
     public void run() {
         while (true) {
-            c.consmer();
+            c.consumer();
         }
     }
 }

@@ -1,10 +1,6 @@
 package com.guchaolong.javalearn.thread.pool;
 
-import java.util.Queue;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 /**
  * Description:
@@ -17,5 +13,6 @@ public class Demo {
         BlockingQueue<Runnable> queue = new LinkedBlockingQueue<>();
         ThreadPoolExecutor pool = new ThreadPoolExecutor(5, 10, 30, TimeUnit.SECONDS,
                 queue);
+        ExecutorService executorService = Executors.newFixedThreadPool(2);
     }
 }
