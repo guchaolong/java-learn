@@ -1,5 +1,8 @@
 package com.guchaolong.algorithm.zuoshensuanfa.advanced.advanced_class_01;
 
+/**
+ * 汉诺塔问题
+ */
 public class Code_02_HanoiProblem {
 
 	public static void hanoi(int n) {
