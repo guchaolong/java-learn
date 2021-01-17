@@ -1,5 +1,8 @@
 package com.guchaolong.algorithm.zuoshensuanfa.basic2020.class08;
 
+/**
+ * 是否是满二叉树
+ */
 public class Code02_IsFull {
 
 	public static class Node {
@@ -18,7 +21,7 @@ public class Code02_IsFull {
 		}
 		int height = h(head);
 		int nodes = n(head);
-		return (1 << height) - 1 == nodes;
+		return (1 << height) - 1 == nodes;//2的高度次方 - 1 = 节点数
 	}
 
 	public static int h(Node head) {
@@ -44,8 +47,8 @@ public class Code02_IsFull {
 	}
 
 	public static class Info {
-		public int height;
-		public int nodes;
+		public int height;//树的高度
+		public int nodes;//节点数
 
 		public Info(int h, int n) {
 			height = h;

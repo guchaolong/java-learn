@@ -6,6 +6,11 @@ import java.util.List;
 
 public class Code02_PrintAllSubsquences {
 
+	/**
+	 * 打印一个字符串的全部子序列
+	 * @param s
+	 * @return
+	 */
 	public static List<String> subs(String s) {
 		char[] str = s.toCharArray();
 		String path = "";
@@ -29,6 +34,8 @@ public class Code02_PrintAllSubsquences {
 		process1(str, index + 1, ans, yes);
 	}
 
+
+	//打印一个字符串的全部子序列，要求不要出现重复字面值的子序列
 	public static List<String> subsNoRepeat(String s) {
 		char[] str = s.toCharArray();
 		String path = "";

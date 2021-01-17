@@ -2,6 +2,9 @@ package com.guchaolong.algorithm.zuoshensuanfa.basic2020.class11;
 
 import java.util.Stack;
 
+/**
+ * 打印n层汉诺塔从最左边移动到最右边的全部过程
+ */
 public class Code01_Hanoi {
 
 	public static void hanoi1(int n) {

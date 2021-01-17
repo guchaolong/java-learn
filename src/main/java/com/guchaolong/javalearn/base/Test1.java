@@ -68,6 +68,7 @@ public class Test1 {
         //创建对象的几种方法
         //1 new
         FatherNewClass f = new FatherNewClass();
+        System.out.println("===============================");
 
         //2 反射 Class的newInstance
         Class clasz = Class.forName("com.guchaolong.javalearn.base.FatherNewClass");

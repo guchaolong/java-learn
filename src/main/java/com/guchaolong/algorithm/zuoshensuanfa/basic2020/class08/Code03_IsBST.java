@@ -2,6 +2,9 @@ package com.guchaolong.algorithm.zuoshensuanfa.basic2020.class08;
 
 import java.util.ArrayList;
 
+/**
+ * 是否是二叉搜索树
+ */
 public class Code03_IsBST {
 
 	public static class Node {

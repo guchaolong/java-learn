@@ -2,6 +2,12 @@ package com.guchaolong.algorithm.zuoshensuanfa.basic2020.class08;
 
 import java.util.LinkedList;
 
+/**
+ * 是否是完全二叉树
+ *
+ * 思路：宽度优先遍历，1：任何节点，如果有右孩子，无左孩子，直接返回false
+ * 2: 一但遇到某个节点的左右孩子不两全，后续遇到的所有节点都为叶子节点
+ */
 public class Code06_IsCBT {
 
 	public static class Node {
