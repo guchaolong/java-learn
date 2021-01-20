@@ -73,10 +73,16 @@ public class Test1 {
         //2 反射 Class的newInstance
         Class clasz = Class.forName("com.guchaolong.javalearn.base.FatherNewClass");
         FatherNewClass o = (FatherNewClass) clasz.newInstance();
+        System.out.println("===============================");
 
         //构造函数的newInstance
 //        Constructor<FatherNewClass> constructor = FatherNewClass.class.getConstructor();
 //        FatherNewClass fatherNewClass = constructor.newInstance();
+
+        //
+//        AbstractClass ac = new AbstractClass();//编译错误，因为AbstractClass是抽象类，不能被实例化
+        System.out.println("===============================");
+
 
 
     }
