@@ -76,10 +76,10 @@ public class Test {
             TreeNode currentNode = queue.poll();
             System.out.println("current node:" + currentNode.value);
             if (currentNode.left != null){
-                ((LinkedList<TreeNode>) queue).add(currentNode.left);
+                queue.add(currentNode.left);
             }
             if (currentNode.right != null){
-                ((LinkedList<TreeNode>) queue).add(currentNode.right);
+                queue.add(currentNode.right);
             }
         }
 

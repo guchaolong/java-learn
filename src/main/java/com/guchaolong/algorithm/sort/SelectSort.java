@@ -22,7 +22,7 @@ public class SelectSort {
 
     public static void main(String[] args) {
         int[] a = {1, 2, 7, 10, 5, 3, 9, 4, 12, 6};
-        selectSort(a);
+        selectionSort(a);
         System.out.println(Arrays.toString(a));
     }
 
@@ -34,25 +34,21 @@ public class SelectSort {
      * 不稳定排序
      * 比较次数与序列初始化状态无关
      */
-    static void selectSort(int[] arr) {
-        if (arr.length <= 1)
-            return;
-        for (int i = 0; i < arr.length - 1; ++i) {
-            //遍历，当前位置为i,当前最大值位置为max
-            int max = i;
-            //往后找找到最大值的位置j，如果找到 max赋值为j
-            for (int j = i + 1; j < arr.length; ++j) {
-                if (arr[j] < arr[max]) {
-                    max = j;
-                }
-            }
-            int temp = arr[i];
-            arr[i] = arr[max];
-            arr[max] = temp;
-        }
-        return;
-    }
 
+    public static void selectionSort(int[] arr) {
+        if (arr == null || arr.length < 2) {
+            return;
+        }
+        for (int i = 0; i < arr.length - 1; i++) {
+            //当前最小的位置，起初为i
+            int minIndex = i;
+            //往后找，是否有比i处小的，有则更新minIndex
+            for (int j = i + 1; j < arr.length; j++) {
+                minIndex = arr[j] < arr[minIndex] ? j : minIndex;
+            }
+            swap(arr, i, minIndex);
+        }
+    }
 
     /**
      * 堆排序

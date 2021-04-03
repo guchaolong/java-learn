@@ -110,11 +110,11 @@ public class SwapSort {
 
     public static void main(String[] args) {
         int[] arr = new int[]{1, 4, 5, 7, 3, 9, 6};
-        bubbleSort2(arr);
+//        bubbleSort2(arr);
+        quickSort(arr, 0, arr.length - 1);
         for (int i : arr) {
             System.out.println(i);
 
         }
-
     }
 }

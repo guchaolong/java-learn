@@ -23,7 +23,7 @@ public class OutputStreamTest {
     public static void main(String[] args) {
         try {
             FileOutputStream fos = new FileOutputStream("./output.txt");
-            byte[] b = "hello sb".getBytes("UTF-8");
+            byte[] b = "hello sb assda".getBytes("UTF-8");
             fos.write(b);
         } catch (IOException e) {
             e.printStackTrace();
