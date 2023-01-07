@@ -11,6 +11,8 @@ public class AutoCast {
         byte b1 = 127;
         byte b2 = 127;
 //        b1 = b1 + b2; //编译报错 b1 + b2的结果为int类型，不能赋值给byte类型的b1
-        b1 += b2;// +=会自动类型转换
+
+        // +=会自动类型转换
+        b1 += b2;
     }
 }

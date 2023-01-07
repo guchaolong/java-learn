@@ -10,7 +10,11 @@
  */
 package com.guchaolong.java8test.stream;
 
+import sun.net.www.content.text.Generic;
+
+import java.lang.reflect.Field;
 import java.util.*;
+import java.util.concurrent.Callable;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 import java.util.stream.Collectors;
@@ -30,8 +34,8 @@ public class Java8Test {
         List<Integer> integers = Arrays.asList(1,2,13,4,15,6,17,8,19);
         IntSummaryStatistics intSummaryStatistics = integers.stream().mapToInt(i -> i).summaryStatistics();
 
-        System.out.println(intSummaryStatistics);
 
+        System.out.println(intSummaryStatistics);
 
 
 
@@ -47,7 +51,7 @@ public class Java8Test {
         String collect = list.stream().filter(s -> !s.isEmpty()).collect(Collectors.joining(","));
         System.out.println(collect);
 
-
+        Collections.shuffle(list);
 
     }
 }

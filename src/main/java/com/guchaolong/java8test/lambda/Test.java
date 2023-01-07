@@ -22,6 +22,7 @@ public class Test {
         }
         System.out.println("arr 最小值为" + min);
 
+
         //jdk8
         System.out.println(Arrays.stream(arr).min().getAsInt());
         System.out.println(IntStream.of(arr).parallel().min().getAsInt());
@@ -32,6 +33,8 @@ public class Test {
 
         Function<Integer, String> function = (i) -> "hello" + i;
         System.out.println(function.apply(6));
+
+        String result = function.apply(6);
 
     }
 }
