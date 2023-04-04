@@ -1,5 +1,6 @@
 package com.guchaolong;
 
+import java.util.ArrayList;
 import java.util.concurrent.*;
 
 /**
@@ -10,7 +11,6 @@ import java.util.concurrent.*;
  */
 public class MyTest {
     public static void main(String[] args) throws Exception{
-
         System.out.println(Math.sqrt(8.0));
         boolean b = true;
 
