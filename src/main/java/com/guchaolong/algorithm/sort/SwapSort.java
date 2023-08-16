@@ -28,7 +28,7 @@ public class SwapSort {
      * 第n-1趟：
      * 0-1                             2这个位置为第二大的数
      *
-     * j的范围为： 0-(n-2) 由外层循环的i来控制
+     * j的范围为： 0~(n-2) 由外层循环的i来控制
      * 时间复杂度 O(N²)
      * 时间复杂度 O(1)
      */
@@ -85,11 +85,11 @@ public class SwapSort {
         temp = arr[low];
         while (i < j) {
             //先看右边，依次往左递减
-            while (temp <= arr[j] && i < j) {
+            while ( arr[j] >= temp && i < j) {
                 j--;
             }
             //再看左边，依次往右递增
-            while (temp >= arr[i] && i < j) {
+            while (arr[i] <= temp && i < j) {
                 i++;
             }
             //如果满足条件则交换
