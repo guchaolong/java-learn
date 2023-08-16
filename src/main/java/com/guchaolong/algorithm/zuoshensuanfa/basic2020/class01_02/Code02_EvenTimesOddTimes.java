@@ -17,12 +17,19 @@ public class Code02_EvenTimesOddTimes {
 		for (int i = 0; i < arr.length; i++) {
 			eor ^= arr[i];
 		}
-		// a 和 b是两种数
-		// eor != 0
+		// a 和 b是两种数 a!=b
+		// 所以 eor != 0，  所以，eor至少有一位上是1，
+		// 比如，假设第8位为1，那么a和b的第8位肯定不同，一个为1，另一个就为0，那么数组中的数就可以分成两类，一种是第8位为1的，另一种是第8位为0的
 		// eor最右侧的1，提取出来
 		// eor :     00110010110111000
 		// rightOne :00000000000001000
-		int rightOne = eor & (-eor); // 提取出最右的1
+
+		// eor :     			1010111100
+		//~eor :     			0101000011
+		//~eor + 1 :			0101000100
+		//eor & (~eor + 1) : 	0000000100
+
+		int rightOne = eor & (~eor + 1); // 提取出最右的1
 		
 		
 		int onlyOne = 0; // eor'
