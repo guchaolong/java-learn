@@ -10,6 +10,7 @@ public class Code_10_PrintCommonPart {
 		}
 	}
 
+	//打印两个链表的公共部分
 	public static void printCommonPart(Node head1, Node head2) {
 		System.out.print("Common Part: ");
 		while (head1 != null && head2 != null) {

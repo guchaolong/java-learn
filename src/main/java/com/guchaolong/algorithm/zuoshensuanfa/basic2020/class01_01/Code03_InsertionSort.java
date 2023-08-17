@@ -25,6 +25,7 @@ public class Code03_InsertionSort {
 
 	// for test
 	public static void comparator(int[] arr) {
+		//使用系统提供的排序方法
 		Arrays.sort(arr);
 	}
 

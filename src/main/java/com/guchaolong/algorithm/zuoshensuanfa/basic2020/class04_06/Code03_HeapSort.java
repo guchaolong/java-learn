@@ -27,7 +27,7 @@ public class Code03_HeapSort {
 		}
 	}
 
-	// arr[index]刚来的数，往上
+	// arr[index]刚来的数，往上继续移动
 	public static void heapInsert(int[] arr, int index) {
 		while (arr[index] > arr[(index - 1) / 2]) {
 			swap(arr, index, (index - 1) / 2);
