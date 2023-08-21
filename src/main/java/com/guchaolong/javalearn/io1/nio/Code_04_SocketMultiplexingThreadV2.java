@@ -13,12 +13,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.atomic.AtomicInteger;
 
-/**
- * Description: 多线程版多路复用
- *
- * @author AA
- * @date 2020/10/13 17:15
- */
+
 
 /**
  * 多线程版非阻塞IO多路复用
@@ -26,8 +21,9 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 开启3个线程,每个线程维护一个自己的Selector, 创建一个队列类型的数组，让3个线程共享这个队列
  * 线程1 boss，只负责处理isAcceptable（）的事件，然后把它放到队列里面
  * 线程2 和 线程3是两个worker, 负则处理读， 到队列中各自的位置上取出数据做处理
+ * @author ezekiel
  */
-public class SocketMultiplexingThreadV2 {
+public class Code_04_SocketMultiplexingThreadV2 {
 
     /*
     NIO
@@ -45,7 +41,7 @@ public class SocketMultiplexingThreadV2 {
 
 
     public static void main(String[] args) {
-        SocketMultiplexingThreadV2 service = new SocketMultiplexingThreadV2();
+        Code_04_SocketMultiplexingThreadV2 service = new Code_04_SocketMultiplexingThreadV2();
         service.initServer();
 
         NioThread t1 = new NioThread(service.selector1, 2);

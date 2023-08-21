@@ -33,7 +33,7 @@ public class Code_02_BIOServer {
             //监听，等待客户端连接
             System.out.println("等待连接....");
             //阻塞1
-            final Socket socket = serverSocket.accept();
+            final Socket client = serverSocket.accept();
             System.out.println("连接到一个客户端");
 
             //就创建一个线程，与之通讯(单独写一个方法)
@@ -41,7 +41,7 @@ public class Code_02_BIOServer {
                 @Override
                 public void run() { //我们重写
                     //可以和客户端通讯
-                    handler(socket);
+                    handler(client);
                 }
             });
 
@@ -51,13 +51,13 @@ public class Code_02_BIOServer {
     }
 
     //编写一个handler方法，和客户端通讯
-    public static void handler(Socket socket) {
+    public static void handler(Socket client) {
 
         try {
             System.out.println("线程信息 id =" + Thread.currentThread().getId() + " 名字=" + Thread.currentThread().getName());
             byte[] bytes = new byte[1024];
             //通过socket 获取输入流
-            InputStream inputStream = socket.getInputStream();
+            InputStream inputStream = client.getInputStream();
 
             //循环的读取客户端发送的数据
             while (true) {
@@ -81,7 +81,7 @@ public class Code_02_BIOServer {
         } finally {
             System.out.println("关闭和client的连接");
             try {
-                socket.close();
+                client.close();
             } catch (Exception e) {
                 e.printStackTrace();
             }

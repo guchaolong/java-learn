@@ -1,7 +1,5 @@
 package com.guchaolong.javalearn.io1.nio;
 
-import io.netty.channel.epoll.Epoll;
-
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -15,17 +13,14 @@ import java.util.Set;
 /**
  * Description: 单线程版多路复用
  *
- * @author AA
- * @date 2020/10/13 17:15
- */
-
-/**
+ *
  * 单线程版非阻塞IO：需要用户线程主动轮询内核，是否有数据
  * 在Channel的基础上，有引入了Selector(多路复用器）
  * Channel可以把自己注册到Selector上，把这个轮询的过程交给内核的selector去做，我们循环的轮询Selector就行
  * selector.select（）可以知道是否有事件到达
+ * @author ezekiel
  */
-public class SocketMultiplexingSingleThreadV1 {
+public class Code_03_SocketMultiplexingSingleThreadV1 {
 
     /*
     NIO
@@ -41,7 +36,7 @@ public class SocketMultiplexingSingleThreadV1 {
     int port = 9090;
 
     public static void main(String[] args) {
-        SocketMultiplexingSingleThreadV1 service = new SocketMultiplexingSingleThreadV1();
+        Code_03_SocketMultiplexingSingleThreadV1 service = new Code_03_SocketMultiplexingSingleThreadV1();
         service.start();
     }
 
@@ -55,7 +50,7 @@ public class SocketMultiplexingSingleThreadV1 {
 
 
             /*
-            FIXME 我的理解： 把serverChannel的可ACCEPT事件注册到多路复用器上
+            FIXME 我的理解： 把serverSocketChannel的可ACCEPT事件注册到多路复用器上
 
             这样的就不用主动轮询内核是否有连接可以accept，
             把这个事情交给多路复用器去完成

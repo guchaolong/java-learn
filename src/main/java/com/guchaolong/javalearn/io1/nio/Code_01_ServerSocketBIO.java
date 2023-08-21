@@ -28,8 +28,11 @@ import java.time.LocalDateTime;
  *
  * 阻塞IO
  * accept() 和 readLine（）方法，如果没有数据是不会返回值的，会一直等待
+ *
+ *
+ * @author ezekiel
  */
-public class ServerSocketBIO {
+public class Code_01_ServerSocketBIO {
     public static void main(String[] args) {
 
         try {

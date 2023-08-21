@@ -8,7 +8,7 @@ import java.nio.ByteBuffer;
  * @author AA
  * @date 2020/9/9 2:33
  */
-public class NIOBufferTest {
+public class Code_06_NIOBufferTest {
     public static void main(String[] args) {
 
         /**

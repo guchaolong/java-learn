@@ -1,6 +1,5 @@
 package com.guchaolong.javalearn.io1.nio;
 
-import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
@@ -14,7 +13,7 @@ import java.util.Iterator;
  * @author AA
  * @date 2020/10/13 18:22
  */
-public class ClientNIO {
+public class Code_05_ClientNIO {
     public static void main(String[] args) {
 
         try {

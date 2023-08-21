@@ -21,8 +21,9 @@ import java.util.List;
  * <p>
  * 它的accept()和read()方法是会立即返回的，不需要等待，可以根据这个返回结果做相应的处理，
  * 但是需要不断的轮询，也就是死循环调这两个方法，轮询内核
+ * @author ezekiel
  */
-public class ServerSocketNIO {
+public class Code_02_ServerSocketNIO {
 
     public static void main(String[] args) throws Exception {
 
