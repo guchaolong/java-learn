@@ -28,9 +28,9 @@ public class Code06_TreeMaxWidth {
 		queue.add(head);
 		// key 在 哪一层，value
 		HashMap<Node, Integer> levelMap = new HashMap<>();
-		levelMap.put(head, 1);
-		int curLevel = 1; // 当前你正在统计哪一层的宽度
-		int curLevelNodes = 0; // 当前层curLevel层，宽度目前是多少
+		levelMap.put(head, 1);//head在第一层
+		int curLevel = 1; // 当前你正在统计哪一层的宽度(当前在哪一层）
+		int curLevelNodes = 0; // 当前层curLevel层，宽度目前是多少（当前层发现了几个节点）
 		int max = 0;
 		while (!queue.isEmpty()) {
 			Node cur = queue.poll();
@@ -45,7 +45,7 @@ public class Code06_TreeMaxWidth {
 			}
 			if (curNodeLevel == curLevel) {
 				curLevelNodes++;
-			} else {
+			} else {//否则，就是来到了下一层，就可以计算上一层的节点数了
 				max = Math.max(max, curLevelNodes);
 				curLevel++;
 				curLevelNodes = 1;

@@ -1,6 +1,7 @@
 package com.guchaolong.algorithm.zuoshensuanfa.basic2020.class08;
 
 import java.util.ArrayList;
+import java.util.Stack;
 
 /**
  * 是否是二叉搜索树
@@ -15,6 +16,49 @@ public class Code03_IsBST {
 		public Node(int data) {
 			this.value = data;
 		}
+	}
+
+	public static int preValue = Integer.MIN_VALUE;
+
+	//递归方式，中序遍历，判断是否是二叉搜索树
+	public static boolean isBST0(Node head){
+		if(head == null){
+			return true;
+		}
+		boolean isLeftBST = isBST0(head.left);
+		if(!isLeftBST){
+			return false;
+		}
+		if(head.value <= preValue){
+			return false;
+		} else {
+			preValue = head.value;
+		}
+		return isBST0(head.right);
+	}
+
+	//非递归方式，中序遍历，判断是否是二叉搜索树
+	public static boolean isBST00(Node cur) {
+		if (cur != null) {
+			Stack<Node> stack = new Stack<Node>();
+			int preValue = Integer.MIN_VALUE;
+			while (!stack.isEmpty() || cur != null) {
+				if (cur != null) {
+					stack.push(cur);
+					cur = cur.left;
+				} else {
+					cur = stack.pop();
+//					System.out.print(cur.value + " ");
+					if(cur.value <= preValue){
+						return false;
+					}else {
+						preValue = cur.value;
+					}
+					cur = cur.right;
+				}
+			}
+		}
+		return true;
 	}
 
 	public static boolean isBST1(Node head) {
@@ -77,10 +121,10 @@ public class Code03_IsBST {
 		}
 		boolean isBST = false;
 		if (
-			(leftInfo == null ? true : (leftInfo.isBST && leftInfo.max < head.value))
-			&&
-		    (rightInfo == null ? true : (rightInfo.isBST && rightInfo.min > head.value))
-		    		) {
+				(leftInfo == null ? true : (leftInfo.isBST && leftInfo.max < head.value))
+						&&
+						(rightInfo == null ? true : (rightInfo.isBST && rightInfo.min > head.value))
+		) {
 			isBST = true;
 		}
 		return new Info(isBST, min, max);

@@ -26,6 +26,17 @@ public class Code01_RecursiveTraversalBT {
 		// 3 打印放这一行就是后序
 	}
 
+	public static void f2(Node node){
+		//第1次，来到node节点
+		if(node == null){
+			return;
+		}
+		f(node.left);
+		//第2次，调完了left,回到了node节点
+		f(node.right);
+		//第3次，调完了right,回到了node节点
+	}
+
 	// 先序打印所有节点
 	public static void pre(Node head) {
 		if (head == null) {
@@ -36,6 +47,7 @@ public class Code01_RecursiveTraversalBT {
 		pre(head.right);
 	}
 
+	// 中序打印所有节点
 	public static void in(Node head) {
 		if (head == null) {
 			return;
@@ -45,6 +57,7 @@ public class Code01_RecursiveTraversalBT {
 		in(head.right);
 	}
 
+	// 后序打印所有节点
 	public static void pos(Node head) {
 		if (head == null) {
 			return;
