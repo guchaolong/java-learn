@@ -10,6 +10,9 @@ import io.netty.util.CharsetUtil;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @author ezekiel
+ */
 /*
 说明
 1. 我们自定义一个Handler 需要继续netty 规定好的某个HandlerAdapter(规范)
