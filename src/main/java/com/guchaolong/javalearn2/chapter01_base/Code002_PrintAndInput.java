@@ -3,12 +3,12 @@ package com.guchaolong.javalearn2.chapter01_base;
 import java.util.Scanner;
 
 /**
- * Description:流程控制
+ * Description:输出和输入
  *
  * @author Ezekiel
  * @date 2024/5/9 02:41
  */
-public class Code002_ProcessControl {
+public class Code002_PrintAndInput {
     public static void main(String[] args) {
         formatPrint();
         input();

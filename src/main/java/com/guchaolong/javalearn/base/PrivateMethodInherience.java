@@ -14,6 +14,10 @@ class FartherClass{
         this.name = name;
     };
 
+    public String getName(){
+        return name;
+    }
+
 }
 
 class SunClass extends FartherClass{
@@ -29,7 +33,9 @@ class SunClass extends FartherClass{
 }
 public class PrivateMethodInherience {
     public static void main(String[] args) {
-        SunNewClass s = new SunNewClass();
+        SunClass s = new SunClass();
+        s.f1();
+        System.out.println(s.getName());
 
     }
 }

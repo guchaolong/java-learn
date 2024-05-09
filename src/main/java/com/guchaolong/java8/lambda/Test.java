@@ -1,4 +1,4 @@
-package com.guchaolong.java8test.lambda;
+package com.guchaolong.java8.lambda;
 
 import java.util.Arrays;
 import java.util.function.Function;

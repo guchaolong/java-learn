@@ -58,10 +58,21 @@ public class Code001_Variable_DataType {
         n >>>= 1;//等价于n = n >>> 1 = 6
 
         //++写在前面和后面计算结果是不同的，++n表示先加1再引用n，n++表示先引用n再加1
-        int i = 3300;
-        i++;//等价于i = i + 1 = 3301;
-        i--;//等价于i = i - 1 = 3300;
-        ++i;//等价于i = i + 1 = 3301;
-        --i;//等价于i = i - 1 = 3299;
+        int i,i_;
+        i = 100;
+        i_ = i++;
+        System.out.printf("i = 100, i_ = i++后：i = %d , i_ = %d\n", i, i_);
+
+        i = 100;
+        i_ = i--;
+        System.out.printf("i = 100, i_ = i--后：i = %d , i_ = %d\n", i, i_);
+
+        i = 100;
+        i_ = ++i;
+        System.out.printf("i = 100, i_ = ++i后：i = %d , i_ = %d\n", i, i_);
+
+        i = 100;
+        i_ = --i;
+        System.out.printf("i = 100, i_ = --i后：i = %d , i_ = %d\n", i, i_);
     }
 }

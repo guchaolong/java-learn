@@ -1,4 +1,4 @@
-package com.guchaolong.java8test.flow;
+package com.guchaolong.java8.flow;
 
 /**
  * Description:
