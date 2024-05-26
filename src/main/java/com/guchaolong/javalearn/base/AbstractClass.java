@@ -12,13 +12,10 @@ public abstract class AbstractClass {
 
     }
 
-
     public abstract void f1();
     abstract void f2();
     //抽象类可以有非抽象方法
     public final void f3(){
         System.out.println("hello");
     }
-
-
 }

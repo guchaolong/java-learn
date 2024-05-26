@@ -36,6 +36,5 @@ public class PrivateMethodInherience {
         SunClass s = new SunClass();
         s.f1();
         System.out.println(s.getName());
-
     }
 }

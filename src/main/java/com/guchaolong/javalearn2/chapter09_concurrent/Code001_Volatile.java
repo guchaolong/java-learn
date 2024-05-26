@@ -28,7 +28,7 @@ public class Code001_Volatile {
         ExecutorService threadPool = Executors.newFixedThreadPool(5);
         Code001_Volatile instance = new Code001_Volatile();
 
-        // 启动5个线程 ,每个线程执行1000次volatileTest()
+        // 启动5个线程 ,每个线程执行500次inc()和atomicInc()
         for (int i = 0; i < 5; i++) {
             threadPool.execute(() -> {
                 for (int j = 0; j < 500; j++) {
@@ -38,7 +38,7 @@ public class Code001_Volatile {
             });
         }
 
-        // 等待2秒,保证上面线程执行结束,然后打印count的值
+        // 等待2秒,保证上面线程执行结束
         Thread.sleep(2000);
 
         // 正常情况下输出: 2500，但是volatile不能保证原子性，所以每次输出都小于2500
