@@ -1,10 +1,13 @@
-package com.guchaolong.javalearn.io2.nio;
+package com.guchaolong.javalearn.io2;
 
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
 
-public class NIOClient {
+/**
+ * @author ezekiel
+ */
+public class Code0051_NIO_SocketChannel {
     public static void main(String[] args) throws Exception{
 
         //得到一个网络通道

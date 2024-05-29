@@ -1,11 +1,11 @@
-package com.guchaolong.javalearn.io2.nio;
+package com.guchaolong.javalearn.io2;
 
 import java.nio.IntBuffer;
 
 /**
  * @author ezekiel
  */
-public class BasicBuffer {
+public class Code0021_NIO_BasicBuffer {
     public static void main(String[] args) {
 
         //举例说明Buffer 的使用 (简单说明)

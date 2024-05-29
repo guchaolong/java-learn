@@ -1,8 +1,14 @@
-package com.guchaolong.javalearn.io2.nio;
+package com.guchaolong.javalearn.io2;
 
 import java.nio.ByteBuffer;
 
-public class NIOByteBufferPutGet {
+/**
+ * yteBuffer 支持类型化的 put 和 get，
+ * put 放入的是什么数据类型，get 就应该使用相应的数据类型来取出，
+ * 否则可能有 BufferUnderflowException 异常
+ * @author ezekiel
+ */
+public class Code0026_NIO_ByteBufferPutGet {
     public static void main(String[] args) {
 
         //创建一个Buffer
@@ -23,11 +29,5 @@ public class NIOByteBufferPutGet {
         System.out.println(buffer.getLong());
         System.out.println(buffer.getChar());
         System.out.println(buffer.getShort());
-
-
-
-
-
-
     }
 }

@@ -1,4 +1,4 @@
-package com.guchaolong.javalearn.io1;
+package com.guchaolong.javalearn.io2;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -23,7 +23,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 线程2 和 线程3是两个worker, 负则处理读， 到队列中各自的位置上取出数据做处理
  * @author ezekiel
  */
-public class Code0071_SocketMultiplexingThreadV2 {
+public class Code0041_NIO_SelectorMultiThreadingV2 {
 
     /*
     NIO
@@ -41,7 +41,7 @@ public class Code0071_SocketMultiplexingThreadV2 {
 
 
     public static void main(String[] args) {
-        Code0071_SocketMultiplexingThreadV2 service = new Code0071_SocketMultiplexingThreadV2();
+        Code0041_NIO_SelectorMultiThreadingV2 service = new Code0041_NIO_SelectorMultiThreadingV2();
         service.initServer();
 
         NioThread t1 = new NioThread(service.selector1, 2);

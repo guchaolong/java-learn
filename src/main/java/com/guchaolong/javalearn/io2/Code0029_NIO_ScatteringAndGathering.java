@@ -1,4 +1,4 @@
-package com.guchaolong.javalearn.io2.nio;
+package com.guchaolong.javalearn.io2;
 
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -9,8 +9,10 @@ import java.util.Arrays;
 /**
  * Scattering：将数据写入到buffer时，可以采用buffer数组，依次写入  [分散]
  * Gathering: 从buffer读取数据时，可以采用buffer数组，依次读
+ *
+ * @author ezekiel
  */
-public class ScatteringAndGatheringTest {
+public class Code0029_NIO_ScatteringAndGathering {
     public static void main(String[] args) throws Exception {
 
         //使用 ServerSocketChannel 和 SocketChannel 网络
@@ -34,7 +36,7 @@ public class ScatteringAndGatheringTest {
 
             int byteRead = 0;
 
-            while (byteRead < messageLength ) {
+            while (byteRead < messageLength) {
                 long l = socketChannel.read(byteBuffers);
                 byteRead += l; //累计读取的字节数
                 System.out.println("byteRead=" + byteRead);
@@ -53,15 +55,11 @@ public class ScatteringAndGatheringTest {
             }
 
             //将所有的buffer 进行clear
-            Arrays.asList(byteBuffers).forEach(buffer-> {
+            Arrays.asList(byteBuffers).forEach(buffer -> {
                 buffer.clear();
             });
 
             System.out.println("byteRead:=" + byteRead + " byteWrite=" + byteWirte + ", messagelength" + messageLength);
         }
-
-
-
-
     }
 }

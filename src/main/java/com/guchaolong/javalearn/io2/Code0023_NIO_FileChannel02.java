@@ -1,11 +1,11 @@
-package com.guchaolong.javalearn.io2.nio;
+package com.guchaolong.javalearn.io2;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
-public class NIOFileChannel02 {
+public class Code0023_NIO_FileChannel02 {
     public static void main(String[] args) throws Exception {
 
         //创建文件的输入流
@@ -24,6 +24,5 @@ public class NIOFileChannel02 {
         //将byteBuffer 的 字节数据 转成String
         System.out.println(new String(byteBuffer.array()));
         fileInputStream.close();
-
     }
 }

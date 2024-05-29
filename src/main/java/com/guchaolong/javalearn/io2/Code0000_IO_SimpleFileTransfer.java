@@ -1,4 +1,4 @@
-package com.guchaolong.javalearn.io1;
+package com.guchaolong.javalearn.io2;
 
 import java.io.*;
 
@@ -8,7 +8,7 @@ import java.io.*;
  * @author AA
  * @date 2020/9/9 2:11
  */
-public class Code0030_IO_SimpleFileTransfer {
+public class Code0000_IO_SimpleFileTransfer {
 
     public static void main(String[] args) throws Exception {
         File source = new File("E:\\新版发布版.zip");

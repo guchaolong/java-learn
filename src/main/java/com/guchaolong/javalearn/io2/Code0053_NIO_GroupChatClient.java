@@ -1,4 +1,4 @@
-package com.guchaolong.javalearn.io2.nio.groupchat;
+package com.guchaolong.javalearn.io2;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -8,9 +8,11 @@ import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
 import java.util.Iterator;
 import java.util.Scanner;
-import java.util.Set;
 
-public class GroupChatClient {
+/**
+ * @author ezekiel
+ */
+public class Code0053_NIO_GroupChatClient {
 
     //定义相关的属性
     private final String HOST = "127.0.0.1"; // 服务器的ip
@@ -20,11 +22,11 @@ public class GroupChatClient {
     private String username;
 
     //构造器, 完成初始化工作
-    public GroupChatClient() throws IOException {
+    public Code0053_NIO_GroupChatClient() throws IOException {
 
         selector = Selector.open();
         //连接服务器
-        socketChannel = socketChannel.open(new InetSocketAddress("127.0.0.1", PORT));
+        socketChannel = SocketChannel.open(new InetSocketAddress("127.0.0.1", PORT));
         //设置非阻塞
         socketChannel.configureBlocking(false);
         //将channel 注册到selector
@@ -32,7 +34,6 @@ public class GroupChatClient {
         //得到username
         username = socketChannel.getLocalAddress().toString().substring(1);
         System.out.println(username + " is ok...");
-
     }
 
     //向服务器发送消息
@@ -42,7 +43,7 @@ public class GroupChatClient {
 
         try {
             socketChannel.write(ByteBuffer.wrap(info.getBytes()));
-        }catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -53,16 +54,16 @@ public class GroupChatClient {
         try {
 
             int readChannels = selector.select();
-            if(readChannels > 0) {//有可以用的通道
+            if (readChannels > 0) {//有可以用的通道
 
                 Iterator<SelectionKey> iterator = selector.selectedKeys().iterator();
                 while (iterator.hasNext()) {
 
                     SelectionKey key = iterator.next();
-                    if(key.isReadable()) {
+                    if (key.isReadable()) {
                         //得到相关的通道
-                       SocketChannel sc = (SocketChannel) key.channel();
-                       //得到一个Buffer
+                        SocketChannel sc = (SocketChannel) key.channel();
+                        //得到一个Buffer
                         ByteBuffer buffer = ByteBuffer.allocate(1024);
                         //读取
                         sc.read(buffer);
@@ -74,10 +75,8 @@ public class GroupChatClient {
                 iterator.remove(); //删除当前的selectionKey, 防止重复操作
             } else {
                 //System.out.println("没有可以用的通道...");
-
             }
-
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -85,22 +84,19 @@ public class GroupChatClient {
     public static void main(String[] args) throws Exception {
 
         //启动我们客户端
-        GroupChatClient chatClient = new GroupChatClient();
+        Code0053_NIO_GroupChatClient chatClient = new Code0053_NIO_GroupChatClient();
 
         //启动一个线程, 每个3秒，读取从服务器发送数据
-        new Thread() {
-            public void run() {
-
-                while (true) {
-                    chatClient.readInfo();
-                    try {
-                        Thread.currentThread().sleep(3000);
-                    }catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+        new Thread(() -> {
+            while (true) {
+                chatClient.readInfo();
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
             }
-        }.start();
+        }).start();
 
         //发送数据给服务器端
         Scanner scanner = new Scanner(System.in);
@@ -110,6 +106,4 @@ public class GroupChatClient {
             chatClient.sendInfo(s);
         }
     }
-
-
 }

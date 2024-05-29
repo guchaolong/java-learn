@@ -1,10 +1,10 @@
-package com.guchaolong.javalearn.io2.nio;
+package com.guchaolong.javalearn.io2;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.nio.channels.FileChannel;
 
-public class NIOFileChannel04 {
+public class Code0025_NIO_FileChannel04 {
     public static void main(String[] args)  throws Exception {
 
         //创建相关流

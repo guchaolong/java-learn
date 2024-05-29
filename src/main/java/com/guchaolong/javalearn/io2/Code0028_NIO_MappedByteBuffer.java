@@ -1,14 +1,16 @@
-package com.guchaolong.javalearn.io2.nio;
+package com.guchaolong.javalearn.io2;
 
 import java.io.RandomAccessFile;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 
-/*
+/**
+ * @author ezekiel
+ */ /*
 说明
 1. MappedByteBuffer 可让文件直接在内存(堆外内存)修改, 操作系统不需要拷贝一次
  */
-public class MappedByteBufferTest {
+public class Code0028_NIO_MappedByteBuffer {
     public static void main(String[] args) throws Exception {
 
         RandomAccessFile randomAccessFile = new RandomAccessFile("1.txt", "rw");

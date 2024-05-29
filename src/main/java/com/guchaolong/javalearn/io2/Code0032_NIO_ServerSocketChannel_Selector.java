@@ -1,4 +1,4 @@
-package com.guchaolong.javalearn.io1;
+package com.guchaolong.javalearn.io2;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -18,7 +18,7 @@ import java.util.Set;
  * @author Ezekiel
  * @date 2024/5/29 07:06
  */
-public class Code0060_NIO_Selector {
+public class Code0032_NIO_ServerSocketChannel_Selector {
     public static void main(String[] args) throws IOException {
 
         //创建NIO ServerSocketChannel

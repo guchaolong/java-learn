@@ -1,4 +1,4 @@
-package com.guchaolong.javalearn.io1;
+package com.guchaolong.javalearn.io2;
 
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -13,7 +13,7 @@ import java.util.Iterator;
  * @author AA
  * @date 2020/10/13 18:22
  */
-public class Code0072_SocketMultiplexingThreadV2_Client {
+public class Code0042_NIO_Client {
     public static void main(String[] args) {
 
         try {

@@ -1,11 +1,11 @@
-package com.guchaolong.javalearn.io2.nio;
+package com.guchaolong.javalearn.io2;
 
 import java.io.FileOutputStream;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
-public class NIOFileChannel01 {
-    public static void main(String[] args) throws Exception{
+public class Code0022_NIO_FileChannel01 {
+    public static void main(String[] args) throws Exception {
 
         String str = "hello,尚硅谷";
         //创建一个输出流->channel
@@ -21,13 +21,11 @@ public class NIOFileChannel01 {
         //将 str 放入 byteBuffer
         byteBuffer.put(str.getBytes());
 
-
         //对byteBuffer 进行flip
         byteBuffer.flip();
 
         //将byteBuffer 数据写入到 fileChannel
         fileChannel.write(byteBuffer);
         fileOutputStream.close();
-
     }
 }

@@ -1,11 +1,11 @@
-package com.guchaolong.javalearn.io2.nio;
+package com.guchaolong.javalearn.io2;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
-public class NIOFileChannel03 {
+public class Code0024_NIO_FileChannel03 {
     public static void main(String[] args) throws Exception {
 
         FileInputStream fileInputStream = new FileInputStream("1.txt");
@@ -30,7 +30,7 @@ public class NIOFileChannel03 {
             byteBuffer.clear(); //清空buffer
             int read = fileChannel01.read(byteBuffer);
             System.out.println("read =" + read);
-            if(read == -1) { //表示读完
+            if (read == -1) { //表示读完
                 break;
             }
             //将buffer 中的数据写入到 fileChannel02 -- 2.txt

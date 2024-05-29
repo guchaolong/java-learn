@@ -8,7 +8,7 @@
  * Date          Version       Name            Description
  * 2018/12/23 1.0          guchaolong          Creation File
  */
-package com.guchaolong.javalearn.io1;
+package com.guchaolong.javalearn.io2;
 
 import java.io.*;
 import java.net.ServerSocket;
@@ -32,7 +32,7 @@ import java.time.LocalDateTime;
  *
  * @author ezekiel
  */
-public class Code0040_BIO_ServerSocket {
+public class Code0030_BIO_ServerSocket {
     public static void main(String[] args) {
 
         try {

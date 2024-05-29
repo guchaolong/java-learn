@@ -1,4 +1,4 @@
-package com.guchaolong.javalearn.io1;
+package com.guchaolong.javalearn.io2;
 
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -24,7 +24,7 @@ import java.util.List;
  *
  * @author ezekiel
  */
-public class Code0050_NIO_ServerSocketChannel {
+public class Code0031_NIO_ServerSocketChannel {
 
     public static void main(String[] args) throws Exception {
         List<SocketChannel> clients = new LinkedList<>();

@@ -1,11 +1,11 @@
-package com.guchaolong.javalearn.io2.nio.zerocopy;
+package com.guchaolong.javalearn.io2;
 
 import java.io.DataOutputStream;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.net.Socket;
 
-public class OldIOClient {
+public class Code0061_ZeroCopy_OldIOClient {
 
     public static void main(String[] args) throws Exception {
         Socket socket = new Socket("localhost", 7001);

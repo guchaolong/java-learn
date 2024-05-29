@@ -1,4 +1,4 @@
-package com.guchaolong.javalearn.io2.nio.zerocopy;
+package com.guchaolong.javalearn.io2;
 
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
@@ -7,7 +7,7 @@ import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 
 //服务器
-public class NewIOServer {
+public class Code0062_ZeroCopy_NewIOServer {
     public static void main(String[] args) throws Exception {
 
         InetSocketAddress address = new InetSocketAddress(7001);

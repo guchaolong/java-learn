@@ -1,11 +1,11 @@
-package com.guchaolong.javalearn.io2.nio.zerocopy;
+package com.guchaolong.javalearn.io2;
 
 import java.io.DataInputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
 //java IO 的服务器
-public class OldIOServer {
+public class Code0060_ZeroCopy_OldIOServer {
 
     public static void main(String[] args) throws Exception {
         ServerSocket serverSocket = new ServerSocket(7001);
