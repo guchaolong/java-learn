@@ -2,6 +2,9 @@ package com.guchaolong.javalearn.io2.nio;
 
 import java.nio.IntBuffer;
 
+/**
+ * @author ezekiel
+ */
 public class BasicBuffer {
     public static void main(String[] args) {
 

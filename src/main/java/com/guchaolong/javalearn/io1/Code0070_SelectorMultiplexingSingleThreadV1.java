@@ -1,4 +1,4 @@
-package com.guchaolong.javalearn.io1.nio;
+package com.guchaolong.javalearn.io1;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -20,7 +20,7 @@ import java.util.Set;
  * selector.select（）可以知道是否有事件到达
  * @author ezekiel
  */
-public class Code_03_SocketMultiplexingSingleThreadV1 {
+public class Code0070_SelectorMultiplexingSingleThreadV1 {
 
     /*
     NIO
@@ -36,7 +36,7 @@ public class Code_03_SocketMultiplexingSingleThreadV1 {
     int port = 9090;
 
     public static void main(String[] args) {
-        Code_03_SocketMultiplexingSingleThreadV1 service = new Code_03_SocketMultiplexingSingleThreadV1();
+        Code0070_SelectorMultiplexingSingleThreadV1 service = new Code0070_SelectorMultiplexingSingleThreadV1();
         service.start();
     }
 

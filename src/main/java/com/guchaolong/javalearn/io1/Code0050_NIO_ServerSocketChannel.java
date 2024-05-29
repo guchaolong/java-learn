@@ -1,4 +1,4 @@
-package com.guchaolong.javalearn.io1.nio;
+package com.guchaolong.javalearn.io1;
 
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -21,13 +21,12 @@ import java.util.List;
  * <p>
  * 它的accept()和read()方法是会立即返回的，不需要等待，可以根据这个返回结果做相应的处理，
  * 但是需要不断的轮询，也就是死循环调这两个方法，轮询内核
+ *
  * @author ezekiel
  */
-public class Code_02_ServerSocketNIO {
+public class Code0050_NIO_ServerSocketChannel {
 
     public static void main(String[] args) throws Exception {
-
-
         List<SocketChannel> clients = new LinkedList<>();
         ServerSocketChannel ss = ServerSocketChannel.open();
         ss.bind(new InetSocketAddress(9090));

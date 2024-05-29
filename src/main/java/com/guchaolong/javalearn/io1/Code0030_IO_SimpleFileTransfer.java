@@ -1,4 +1,4 @@
-package com.guchaolong.javalearn.io1.bio;
+package com.guchaolong.javalearn.io1;
 
 import java.io.*;
 
@@ -8,20 +8,18 @@ import java.io.*;
  * @author AA
  * @date 2020/9/9 2:11
  */
-public class SimpleFileTransferTest {
+public class Code0030_IO_SimpleFileTransfer {
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         File source = new File("E:\\新版发布版.zip");
         File des = new File("E:\\qqq.zip");
         System.out.println("传统io耗时：" + transferFile(source, des));
-
     }
 
-    private static long transferFile(File source, File des) throws Exception{
-
+    private static long transferFile(File source, File des) throws Exception {
         long start = System.currentTimeMillis();
 
-        if(!des.exists()){
+        if (!des.exists()) {
             des.createNewFile();
         }
 
@@ -30,24 +28,22 @@ public class SimpleFileTransferTest {
 
         byte[] buff = new byte[1024 * 1024];
         int len;
-        while ((len = bis.read(buff)) != -1){
+        while ((len = bis.read(buff)) != -1) {
             bos.write(buff);
         }
         long end = System.currentTimeMillis();
         return end - start;
     }
 
-    private static long transferFileWithNIO(File source, File des) throws Exception{
-
+    private static long transferFileWithNIO(File source, File des) throws Exception {
         long start = System.currentTimeMillis();
 
-        if(!des.exists()){
+        if (!des.exists()) {
             des.createNewFile();
         }
 
         long end = System.currentTimeMillis();
         return end - start;
     }
-
 
 }

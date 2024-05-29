@@ -1,4 +1,4 @@
-package com.guchaolong.javalearn.io1.nio;
+package com.guchaolong.javalearn.io1;
 
 import java.nio.ByteBuffer;
 
@@ -8,7 +8,7 @@ import java.nio.ByteBuffer;
  * @author AA
  * @date 2020/9/9 2:33
  */
-public class Code_06_NIOBufferTest {
+public class Code0031_NIO_Buffer {
     public static void main(String[] args) {
 
         /**

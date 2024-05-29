@@ -8,7 +8,7 @@
  * Date          Version       Name            Description
  * 2018/12/23 1.0          guchaolong          Creation File
  */
-package com.guchaolong.javalearn.io1.nio;
+package com.guchaolong.javalearn.io1;
 
 import java.io.*;
 import java.net.ServerSocket;
@@ -32,7 +32,7 @@ import java.time.LocalDateTime;
  *
  * @author ezekiel
  */
-public class Code_01_ServerSocketBIO {
+public class Code0040_BIO_ServerSocket {
     public static void main(String[] args) {
 
         try {
@@ -58,7 +58,7 @@ public class Code_01_ServerSocketBIO {
                         String cmd = reader.readLine();
 
                         if ("time".equals(cmd)) {
-                            writer.write(LocalDateTime.now().toString() + "\n");
+                            writer.write("当前时间是：" + LocalDateTime.now().toString() + "\n");
                             writer.flush();
                         } else {
                             writer.write("sorry?\n");
@@ -71,11 +71,7 @@ public class Code_01_ServerSocketBIO {
                         e.printStackTrace();
                     }
                 }).start();
-
-
             }
-
-
         } catch (IOException e) {
             e.printStackTrace();
         }

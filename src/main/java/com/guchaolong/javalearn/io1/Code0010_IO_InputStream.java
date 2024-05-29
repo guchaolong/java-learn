@@ -8,7 +8,7 @@
  * Date          Version       Name            Description
  * 2018/12/19 1.0          guchaolong          Creation File
  */
-package com.guchaolong.javalearn.io1.bio;
+package com.guchaolong.javalearn.io1;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -20,7 +20,7 @@ import java.io.IOException;
  * @author guchaolong
  * @date 2018/12/19 1:41
  */
-public class InputStreamTest {
+public class Code0010_IO_InputStream {
     public static void main(String[] args) {
         int a = '您';
         System.out.println(a);
